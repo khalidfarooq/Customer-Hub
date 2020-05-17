@@ -6,16 +6,20 @@
 
 <div class="row">
   <div class="col-md">
-    <div class="card card-body">
+    <div class="card card-body ">
       <h5>Customer:</h5>
       <hr>
+<<<<<<< HEAD
       <a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a>
+=======
+      <a class="btn btn-outline-info  btn-sm btn-block" href="" >Update Customer</a>
+>>>>>>> TableSearch and Styling
       <a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'create_order' customer.id %}">Create Order</a>
 
     </div>
   </div>
   <div class="col-md">
-    <div class="card card-body">
+    <div class="card card-body customer-info">
       <h5>Contact Information</h5>
       <hr>
       <p>Email: {{customer.email}}</p>
@@ -23,10 +27,10 @@
     </div>
   </div>
   <div class="col-md">
-    <div class="card card-body">
+    <div class="card card-body total-orders">
       <h5>Total Orders</h5>
       <hr>
-      <h1 style="text-align: center;padding: 10px">{{orders_count}}</h1>
+      <h1 style="text-align: center;padding: 10px"><strong>{{orders_count}}</strong></h1>
     </div>
   </div>
 
@@ -34,19 +38,19 @@
 </div>
 
 
-<br>
+<br><br>
 <div class="row">
   <div class="col">
-    <div class="card card-body">
+    <div class="card card-body" style="background-color : #CED0E1;">
       <form method="get">
-
+        {{myFilter.form}}
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </div>
   </div>
 
 </div>
-<br>
+<br><br>
 
 <div class="row">
   <div class="col-md">

@@ -4,6 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 from .models import *
 from .forms import OrderForm
+from .filters import OrderFilter
 
 def home(request):
     orders = Order.objects.all()
@@ -22,7 +23,11 @@ def customer(request,pk):
     customer = Customer.objects.get(id = pk)
     orders = customer.order_set.all() #order_set is to query the data of child model
     orders_count = orders.count()
-    context = {'customer':customer,'orders':orders,'orders_count':orders_count}
+
+    myFilter = OrderFilter(request.GET , queryset = orders)
+    orders = myFilter.qs
+    context = {'customer':customer,'orders':orders,'orders_count':orders_count
+    ,'myFilter':myFilter}
 
     return render(request,'accounts/customer.html',context)
 

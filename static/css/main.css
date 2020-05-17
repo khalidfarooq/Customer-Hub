@@ -9,12 +9,29 @@ background-color: #ebeff5;
 #total-orders{
 background-color: #4cb4c7;
 }
- 
+
 
 #orders-delivered{
-background-color: #7abecc;
+background-color: #06D6A0;
 }
 
 #orders-pending{
-background-color: #7CD1C0;
+background-color: #EF476F;
+}
+
+.btn{
+  border-radius: 30px;
+}
+.row .col-md .customer-info{
+  background-color: #b7e4c7 ;
+}
+
+.row .col-md .total-orders{
+  background-color: #4cb4c7;
+
+}
+.card{
+  box-shadow: -webkit-box-shadow: 6px 10px 9px 0px rgba(153,139,153,0.89);
+-moz-box-shadow: 6px 10px 9px 0px rgba(153,139,153,0.89);
+box-shadow: 6px 10px 9px 0px rgba(153,139,153,0.89);
 }
