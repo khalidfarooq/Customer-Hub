@@ -23,11 +23,16 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'products' %}">Products</a>
         </li>
-      {% endif %} 
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account' %}">Settings</a>
+          </li>
+        {% endif %}
+
     </ul>
   </div>
-
   <span class="hello-msg">Hello, {{request.user}}</span>
-  <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+  <span> <a class="btn btn-sm btn-info log-out" href="{% url 'logout' %}"><strong>Logout</strong></a></span>
+
 
 </nav>

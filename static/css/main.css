@@ -35,3 +35,10 @@ background-color: #EF476F;
 -moz-box-shadow: 6px 10px 9px 0px rgba(153,139,153,0.89);
 box-shadow: 6px 10px 9px 0px rgba(153,139,153,0.89);
 }
+span .log-out {
+  padding: 10px 10px
+  border-radius: 10px;
+  background-color: #E3B505;
+  color : black;
+
+}
